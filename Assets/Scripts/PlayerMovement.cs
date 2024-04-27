@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer pickedItemSprite;
 
     private PlayerStats playerStats;
+    private ItemAbbility itemAbbility;
 
     public float playerMoveSpeed;
 
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerStats = GetComponent<PlayerStats>();
+        itemAbbility = GetComponent<ItemAbbility>();
     }
 
     
@@ -32,6 +34,15 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             pickedItemSprite.enabled = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if(playerStats.isItemPicked())
+            {
+                itemAbbility.UseItem(playerStats.pickedItem.name);
+            }
+            
         }
 
     }

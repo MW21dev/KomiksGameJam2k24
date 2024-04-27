@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NPC_Stick : NPCScript
 {
+    
     public override void Interact()
     {
         SpriteRenderer spriteRenderer = GetComponentInChildren<SpriteRenderer>();

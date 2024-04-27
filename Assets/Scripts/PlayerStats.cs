@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     public int sinAmmount;
+    public int blessAmmount;
     
 
     public GameObject pickedItem;
