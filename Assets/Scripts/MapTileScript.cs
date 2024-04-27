@@ -46,7 +46,7 @@ public class MapTileScript : MonoBehaviour
 
     public void RandomizeMapTile()
     {
-        Random.Range(0, mapTiles.Length);
+       // Random.Range(0, mapTiles.Length);
     }
 
     public void MoveCamera()

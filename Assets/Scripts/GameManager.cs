@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class GameManager : MonoBehaviour
     public GameObject[] NPCItems;
     public GameObject[] NPCS;
 
+    
+
+    public GameObject winScreen;
+    public GameObject loseScreen;
+    
+
     private void Awake()
     {
         if(Instance == null)
@@ -19,6 +26,23 @@ public class GameManager : MonoBehaviour
         }
 
         SpawnPlayer(player);
+
+        
+
+    }
+
+    private void Update()
+    {
+        if(PlayerStats.Instance.sinAmmount >= 6)
+        {
+            Invoke("Restart", 0.3f);
+        }
+
+        if(PlayerStats.Instance.blessAmmount >= 6)
+        {
+            winScreen.SetActive(true);
+        }
+
     }
 
     public void SpawnPlayer(GameObject player)
@@ -26,5 +50,9 @@ public class GameManager : MonoBehaviour
         Instantiate(player, new Vector3(-5, 5, 0), Quaternion.identity);
     }
 
+    public void Restart()
+    {
+        SceneManager.LoadScene("Game", LoadSceneMode.Single);
+    }
 
 }

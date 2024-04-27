@@ -33,6 +33,6 @@ public class PauseMenu : MonoBehaviour
     public void ExiToMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene( 1, LoadSceneMode.Single);
+        SceneManager.LoadScene( "MainMenu", LoadSceneMode.Single);
     }
 }

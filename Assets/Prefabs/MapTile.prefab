@@ -176,6 +176,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapTiles: []
+  map1Sprites:
+  - {fileID: -277282080, guid: b14079ed09a7ef34a9926c8fbf3435a1, type: 3}
+  - {fileID: -1244143756, guid: b14079ed09a7ef34a9926c8fbf3435a1, type: 3}
+  - {fileID: -844357428, guid: b14079ed09a7ef34a9926c8fbf3435a1, type: 3}
+  - {fileID: -1021234945, guid: b14079ed09a7ef34a9926c8fbf3435a1, type: 3}
+  - {fileID: -1380671352, guid: b14079ed09a7ef34a9926c8fbf3435a1, type: 3}
+  - {fileID: -1383571217, guid: b14079ed09a7ef34a9926c8fbf3435a1, type: 3}
+  - {fileID: 579488748, guid: b14079ed09a7ef34a9926c8fbf3435a1, type: 3}
+  - {fileID: -1934874351, guid: b14079ed09a7ef34a9926c8fbf3435a1, type: 3}
+  - {fileID: 947750494, guid: b14079ed09a7ef34a9926c8fbf3435a1, type: 3}
+  map2Sprites: []
+  map3Sprites: []
   spriteRenderer: {fileID: 0}
   mainCamera: {fileID: 0}
+  mapTileId: 0
   cameraSpeed: 40

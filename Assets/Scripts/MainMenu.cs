@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
     }
     public void GameStart()
     {
-        SceneManager.LoadScene( 0 , LoadSceneMode.Single);
+        SceneManager.LoadScene( "StartCutScene", LoadSceneMode.Single);
     }
 
     public void CreditsImage()

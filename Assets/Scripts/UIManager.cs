@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,14 +8,16 @@ public class UIManager : MonoBehaviour
 {
     public Slider sinSlider;
     public Slider blessSlider;
+
+    public TMP_Text itemName;
     
     public PlayerStats playerStats;
 
-    public int maxSin = 3;
+    public int maxSin = 6;
     public int minSin = 0;
     public int currentSin;
 
-    public int maxBless = 3;
+    public int maxBless = 6;
     public int minBless = 0;
     public int currentBless;
 
@@ -38,5 +41,14 @@ public class UIManager : MonoBehaviour
 
         blessSlider.value = currentBless;
         currentBless = playerStats.blessAmmount;
+
+        if(playerStats.pickedItem == null)
+        {
+            itemName.SetText("-");
+        }
+        else
+        {
+            itemName.text = playerStats.pickedItem.name;
+        }
     }
 }

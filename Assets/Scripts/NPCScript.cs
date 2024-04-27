@@ -20,7 +20,7 @@ public abstract class NPCScript : MonoBehaviour, IInteractable
         }
     }
 
-    private bool isWithinInteractDistance()
+    public bool isWithinInteractDistance()
     {
         if (Vector2.Distance(playerTransform.position, transform.position) < interactDisntance)
         {
