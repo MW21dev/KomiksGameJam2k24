@@ -51,11 +51,12 @@ public class GameManager : MonoBehaviour
         if(PlayerStats.Instance.blessAmmount >= 6)
         {
             winScreen.SetActive(true);
+            Invoke("EndGame", 30f);
         }
 
         if (PlayerStats.Instance.sinAmmount >= 6)
         {
-            Invoke("Restart", 0.5f);
+            Invoke("Restart", 1f);
         }
     }
 
@@ -86,5 +87,10 @@ public class GameManager : MonoBehaviour
 
 
 
+    }
+
+    public void EndGame()
+    {
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
     }
 }

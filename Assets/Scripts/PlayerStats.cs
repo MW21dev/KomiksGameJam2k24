@@ -40,6 +40,16 @@ public class PlayerStats : MonoBehaviour
                 pickedItem = null;
             }
         }
+
+        if(sinAmmount < 0)
+        {
+            sinAmmount = 0;
+        }
+
+        if(blessAmmount < 0)
+        {
+            blessAmmount = 0;
+        }
     }
 
     public bool isItemPicked()

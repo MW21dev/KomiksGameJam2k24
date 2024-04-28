@@ -61,6 +61,8 @@ public class SoundManager : MonoBehaviour
 
     public void PlayOneS(AudioClip clip)
     {
+        if (soundManager.isPlaying)
+            return;
         soundManager.PlayOneShot(clip);
     }
 }
