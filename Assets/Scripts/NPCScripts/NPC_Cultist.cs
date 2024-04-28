@@ -14,6 +14,9 @@ public class NPC_Cultist : NPCScript, ITalkable
 	[TextArea]
 	public string text;
 
+	[TextArea]
+	public string alttext;
+
 	[SerializeField]
 	private int dialogueStage;
 
@@ -26,20 +29,42 @@ public class NPC_Cultist : NPCScript, ITalkable
 
 	public override void Interact()
 	{
-		if (dialogueStage == 1)
+		if(PlayerStats.Instance.blessAmmount > PlayerStats.Instance.sinAmmount)
 		{
-			dialogueText.SetText(text);
-			dialogueScreen.alpha = 1;
+            if (dialogueStage == 1)
+            {
+                dialogueText.SetText(text);
+                dialogueScreen.alpha = 1;
 
-			dialogueStage -= 1;
+                dialogueStage -= 1;
 
-		}
-		else if (dialogueStage == 0)
+            }
+            else if (dialogueStage == 0)
+            {
+
+                Action(1);
+                dialogueStage -= 1;
+            }
+        }
+		else
 		{
-			
-			Action(1);
-			dialogueStage -= 1;
-		}
+            if (dialogueStage == 1)
+            {
+                dialogueText.SetText(alttext);
+                dialogueScreen.alpha = 1;
+
+                dialogueStage -= 1;
+
+            }
+            else if (dialogueStage == 0)
+            {
+
+                Action(2);
+                dialogueStage -= 1;
+            }
+        }
+		
+		
 	}
 
 	public void Talk()
@@ -50,6 +75,15 @@ public class NPC_Cultist : NPCScript, ITalkable
 	public void Action(int index)
 	{
 		dialogueScreen.alpha = 0;
-		PlayerStats.Instance.blessAmmount += index;
-	}
+		if(index == 1)
+		{
+			PlayerStats.Instance.blessAmmount += 2;
+		}
+
+		if(index == 2)
+		{
+            PlayerStats.Instance.sinAmmount += 2;
+
+        }
+    }
 }

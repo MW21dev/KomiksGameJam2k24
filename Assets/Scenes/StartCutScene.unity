@@ -225,8 +225,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.5407, y: 0}
+  m_SizeDelta: {x: 1.0814, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &851193329
 MonoBehaviour:
@@ -299,15 +299,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cutSceneSprites:
-  - {fileID: 1530195315, guid: d05c5647278fd604fb193d63d9af0ccc, type: 3}
-  - {fileID: 732888903, guid: d05c5647278fd604fb193d63d9af0ccc, type: 3}
-  - {fileID: 133674891, guid: d05c5647278fd604fb193d63d9af0ccc, type: 3}
-  - {fileID: 1439435519, guid: d05c5647278fd604fb193d63d9af0ccc, type: 3}
-  - {fileID: 824967349, guid: d05c5647278fd604fb193d63d9af0ccc, type: 3}
-  - {fileID: -812826413, guid: d05c5647278fd604fb193d63d9af0ccc, type: 3}
-  - {fileID: -503457193, guid: e0338874f12672743a8d4e7cacd1c7d2, type: 3}
-  - {fileID: -1888260810, guid: e0338874f12672743a8d4e7cacd1c7d2, type: 3}
-  - {fileID: -603643701, guid: e0338874f12672743a8d4e7cacd1c7d2, type: 3}
+  - {fileID: -644373253, guid: 1b8594df41932fc4ab78e196972810b4, type: 3}
+  - {fileID: -2009077158, guid: 1b8594df41932fc4ab78e196972810b4, type: 3}
+  - {fileID: 1696532070, guid: 1b8594df41932fc4ab78e196972810b4, type: 3}
+  - {fileID: -1318414702, guid: 1b8594df41932fc4ab78e196972810b4, type: 3}
+  - {fileID: 2060224095, guid: 1b8594df41932fc4ab78e196972810b4, type: 3}
+  - {fileID: 646091687, guid: 1b8594df41932fc4ab78e196972810b4, type: 3}
+  - {fileID: 102721387, guid: 1b8594df41932fc4ab78e196972810b4, type: 3}
+  - {fileID: 910588865, guid: 1b8594df41932fc4ab78e196972810b4, type: 3}
+  - {fileID: -1238543233, guid: 1b8594df41932fc4ab78e196972810b4, type: 3}
   currentSprite: {fileID: 851193329}
   stage: 0
 --- !u!114 &1157145069

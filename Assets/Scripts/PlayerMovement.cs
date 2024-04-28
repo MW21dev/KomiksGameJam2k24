@@ -7,6 +7,10 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D playerRigidbody;
     public SpriteRenderer pickedItemSprite;
 
+    public Animator animator;
+
+
+
     private PlayerStats playerStats;
     private ItemAbbility itemAbbility;
 
@@ -40,16 +44,28 @@ public class PlayerMovement : MonoBehaviour
         {
             if(playerStats.isItemPicked())
             {
-                itemAbbility.UseItem(playerStats.pickedItem.name);
+                itemAbbility.UseItem(playerStats.pickedItemName);
             }
             
         }
 
+        if(PlayerStats.Instance.sinAmmount >= 6 && !dead)
+        {
+            animator.Play("Dead");
+            PlaySoundManager();
+            dead = true;
+        }
     }
+    private bool dead = false;
 
     private void FixedUpdate()
     {
         playerRigidbody.velocity = new Vector2(move.x * playerMoveSpeed * Time.fixedDeltaTime, move.y * playerMoveSpeed * Time.fixedDeltaTime);
         playerRigidbody.velocity.Normalize();
+    }
+
+    public void PlaySoundManager()
+    {
+        SoundManager.Instance.PlayOneS(SoundManager.Instance.lose);
     }
 }

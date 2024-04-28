@@ -11,6 +11,8 @@ public class PlayerStats : MonoBehaviour
     
 
     public GameObject pickedItem;
+    public NPC_BottleOfWine itemScript;
+    public string pickedItemName;
 
     private void Awake()
     {
@@ -19,6 +21,25 @@ public class PlayerStats : MonoBehaviour
             Instance = this;
         }
 
+    }
+
+    private void Update()
+    {
+        if(pickedItem != null)
+        {
+            itemScript = pickedItem.GetComponent<NPC_BottleOfWine>();
+            pickedItemName = itemScript.itemName;
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+
+            if (isItemPicked())
+            {
+                Instantiate(pickedItem, transform.position, Quaternion.identity);
+                pickedItem = null;
+            }
+        }
     }
 
     public bool isItemPicked()

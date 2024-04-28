@@ -48,7 +48,7 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            itemName.text = playerStats.pickedItem.name;
+            itemName.text = playerStats.pickedItemName;
         }
     }
 }

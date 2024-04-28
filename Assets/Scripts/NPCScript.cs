@@ -7,6 +7,8 @@ public abstract class NPCScript : MonoBehaviour, IInteractable
     private Transform playerTransform;
     public float interactDisntance;
 
+    
+
     private void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -18,6 +20,9 @@ public abstract class NPCScript : MonoBehaviour, IInteractable
         {
             Interact();
         }
+
+        
+        
     }
 
     public bool isWithinInteractDistance()
@@ -29,6 +34,7 @@ public abstract class NPCScript : MonoBehaviour, IInteractable
         else
         {
             return false;
+            
         }
     }
 
