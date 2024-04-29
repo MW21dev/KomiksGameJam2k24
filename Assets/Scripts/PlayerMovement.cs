@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator animator;
 
-
+    public static PlayerMovement Instance;
 
     private PlayerStats playerStats;
     private ItemAbbility itemAbbility;
@@ -17,7 +17,15 @@ public class PlayerMovement : MonoBehaviour
     public float playerMoveSpeed;
 
     Vector2 move = Vector2.zero;
-    
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+    }
+
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
@@ -60,8 +68,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        playerRigidbody.velocity = new Vector2(move.x * playerMoveSpeed * Time.fixedDeltaTime, move.y * playerMoveSpeed * Time.fixedDeltaTime);
-        playerRigidbody.velocity.Normalize();
+        if (PlayerStats.Instance.canMove)
+        {
+            playerRigidbody.velocity = new Vector2(move.x * playerMoveSpeed * Time.fixedDeltaTime, move.y * playerMoveSpeed * Time.fixedDeltaTime);
+            playerRigidbody.velocity.Normalize();
+        }
+        
     }
 
     public void PlaySoundManager()

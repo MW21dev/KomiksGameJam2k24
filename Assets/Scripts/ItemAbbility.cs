@@ -46,7 +46,7 @@ public class ItemAbbility : MonoBehaviour
                 break;
             case "Coin":
                 //int n = Random.Range(0, GameManager.Instance.NPCItems.Length - 1);
-                if(Vector2.Distance(transform.position, GameManager.Instance.cathedraPosition.transform.position) < 1)
+                if(Vector2.Distance(transform.position, GameManager.Instance.cathedraPosition.transform.position) < 1 || Vector2.Distance(transform.position, GameManager.Instance.altarCultistPosition.transform.position) < 1.5f)
                 {
                     playerStats.blessAmmount += 1;
                     playerStats.pickedItem = null;

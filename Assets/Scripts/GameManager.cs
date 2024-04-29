@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public CanvasGroup dialogueScreen;
+
     public GameObject player;
 
     public GameObject[] NPCItems;
@@ -14,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject cathedraPosition;
     public GameObject flowerGuyPosition;
+    public GameObject altarCultistPosition;
 
     public GameObject spawnPoint1;
     public GameObject spawnPoint2;
@@ -35,7 +38,7 @@ public class GameManager : MonoBehaviour
 
         SpawnPlayer(player);
 
-        
+       
 
     }
 
@@ -51,13 +54,17 @@ public class GameManager : MonoBehaviour
         if(PlayerStats.Instance.blessAmmount >= 6)
         {
             winScreen.SetActive(true);
-            Invoke("EndGame", 30f);
+            Invoke("EndGame", 20f);
         }
 
         if (PlayerStats.Instance.sinAmmount >= 6)
         {
+            PlayerMovement.Instance.playerRigidbody.velocity = Vector2.zero;
+            PlayerStats.Instance.canMove = false;
             Invoke("Restart", 1f);
         }
+
+
     }
 
     public void SpawnPlayer(GameObject player)

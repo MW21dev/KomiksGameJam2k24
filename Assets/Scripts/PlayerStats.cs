@@ -8,7 +8,8 @@ public class PlayerStats : MonoBehaviour
     
     public int sinAmmount;
     public int blessAmmount;
-    
+
+    public bool canMove;
 
     public GameObject pickedItem;
     public NPC_BottleOfWine itemScript;
@@ -21,6 +22,12 @@ public class PlayerStats : MonoBehaviour
             Instance = this;
         }
 
+        
+    }
+
+    private void Start()
+    {
+        canMove = true;
     }
 
     private void Update()

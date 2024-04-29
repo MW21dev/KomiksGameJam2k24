@@ -658,11 +658,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 508148257363017439, guid: cf501cf4cdde415439a36c829f64dbf4, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 508148257363017439, guid: cf501cf4cdde415439a36c829f64dbf4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 757365646313467702, guid: cf501cf4cdde415439a36c829f64dbf4, type: 3}
       propertyPath: m_AnchorMax.y
@@ -674,11 +674,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 809453808415472194, guid: cf501cf4cdde415439a36c829f64dbf4, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 809453808415472194, guid: cf501cf4cdde415439a36c829f64dbf4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1833209757923873933, guid: cf501cf4cdde415439a36c829f64dbf4, type: 3}
       propertyPath: m_fontSize
@@ -1014,6 +1014,10 @@ PrefabInstance:
       propertyPath: NPCItems.Array.size
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1903212105137115442, guid: 39327827e248aca48a7195e127790d18, type: 3}
+      propertyPath: altarCultistPosition
+      value: 
+      objectReference: {fileID: 566597597}
     - target: {fileID: 1903212105137115442, guid: 39327827e248aca48a7195e127790d18, type: 3}
       propertyPath: NPCItems.Array.data[0]
       value: 
@@ -1434,6 +1438,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9197b01fe3f797e428bfdac31dd7efa6, type: 3}
+--- !u!1 &566597597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8043773481303613634, guid: 9197b01fe3f797e428bfdac31dd7efa6, type: 3}
+  m_PrefabInstance: {fileID: 566597596}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &583218660
 GameObject:
   m_ObjectHideFlags: 0
